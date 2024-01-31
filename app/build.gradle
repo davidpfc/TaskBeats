@@ -39,15 +39,19 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.8.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation "io.coil-kt:coil:2.3.0"
+    
 
     //Implementando biblioteca room
     def room_version = "2.4.1"
-
     implementation "androidx.room:room-runtime:$room_version"
     kapt "androidx.room:room-compiler:$room_version"
-
     // optional - Test helpers
     testImplementation "androidx.room:room-testing:$room_version"
+
+    //dependencias Fragments
+    def fragment_version = "1.5.6"
+    implementation("androidx.fragment:fragment-ktx:$fragment_version")
 
     //dependencias viewmodel
     def lifecycle_version = "2.5.1"
@@ -85,4 +89,8 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4"
+    testImplementation "org.mockito:mockito-core:4.5.1"
+    testImplementation "org.mockito.kotlin:mockito-kotlin:4.1.0"
 }
